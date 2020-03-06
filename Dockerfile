@@ -5,3 +5,4 @@ ENV TZ Asia/Taipei
 COPY ./requirements.txt /requirements.txt
 RUN pip install -r /requirements.txt
 
+CMD ["python3","hellodocker.py"]
