@@ -5,7 +5,7 @@
 
 2. clone this repo and cd into this as working directory
 
-3. build image from `Dockerfile` and run `ptt_web_crawler_docker.py` in container:
+3. build image from `Dockerfile` and run `hellodocker.py` in container:
 ```
 docker build -t my_image .
 docker run --mount type=bind,source={/YOUR/PATH/OF/LOCAL/WORKING/DIRECTORY},target={/work_dir} my_image python3 {/work_dir}/hellodocker.py 
