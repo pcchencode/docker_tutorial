@@ -12,3 +12,14 @@ docker run --mount type=bind,source={/YOUR/PATH/OF/LOCAL/WORKING/DIRECTORY},targ
 
 docker run --mount type=bind,source=/Users/user/Desktop/docker_test,target=/Users/user/Desktop/docker_test my_image python3 /Users/user/Desktop/docker_test/hellodocker.py
 ```
+
+### 基本指令
+* 顯示 docker 的 images 清單
+```
+docker images
+```
+
+* 透過 image 執行產生一個新的 container
+```
+docker run {image名稱}
+```
