@@ -6,4 +6,4 @@ COPY requirements.txt .
 COPY hellodocker.py .
 RUN pip install -r /requirements.txt
 
-CMD ["python3","hellodocker.py"]
+# CMD ["python3","hellodocker.py"]

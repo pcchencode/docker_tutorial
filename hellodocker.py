@@ -4,7 +4,8 @@ import pandas as pd
 def main():
 	lst = ['Geeks', 'For', 'Geeks', 'is', 'portal', 'for', 'Geeks']
 	data = pd.DataFrame(lst)
-	data.to_csv('/tmp/data.csv')
+	# data.to_csv('/tmp/data.csv') # 存入 container 裡面的 tmp 資料夾當中
+	data.to_csv('data.csv') # 直接存入 container workdir 裡頭
 	print("file saved.")
 	print(data)
 	print('hello')
