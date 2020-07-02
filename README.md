@@ -1,5 +1,5 @@
 # docker_test
-### 使用方法：
+### 使用方法與下載：
 * Docker:
 1. download and install Docker desktop  [Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/) or [Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
@@ -7,10 +7,11 @@
 
 3. build image from `Dockerfile` and run `hellodocker.py` in container:
 ```
-docker build -t my_image .
-docker run --mount type=bind,source={/YOUR/PATH/OF/LOCAL/WORKING/DIRECTORY},target={/work_dir} my_image python3 {/work_dir}/hellodocker.py 
+docker build -t {image_name} .
 
-docker run --mount type=bind,source=/Users/user/Desktop/docker_test,target=/Users/user/Desktop/docker_test my_image python3 /Users/user/Desktop/docker_test/hellodocker.py
+docekr run -it -d {image_name} sh 
+
+docker exec -it {container_id} sh
 ```
 
 ### 基本指令
