@@ -34,7 +34,7 @@ $ docker exec -it {container_id} sh
 $ docker images
 ```
 
-* 透過 containers 清單
+* 顯示 containers 清單
 ```
 $ docker ps
 $ docker ps -a
