@@ -10,4 +10,4 @@ COPY download_ckip.py .
 # Install any needed packages specified in requirements.txt
 RUN pip install -r /requirements.txt
 
-# CMD ["python3","download.py"]
+# CMD ["python3","download_ckip.py"]
