@@ -5,8 +5,9 @@ ENV TZ Asia/Taipei
 
 COPY requirements.txt .
 COPY hellodocker.py .
+COPY download_ckip.py .
 
 # Install any needed packages specified in requirements.txt
 RUN pip install -r /requirements.txt
 
-# CMD ["python3","hellodocker.py"]
+# CMD ["python3","download.py"]
