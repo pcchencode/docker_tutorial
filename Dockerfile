@@ -14,6 +14,9 @@ RUN pip install -r /requirements.txt
 RUN ["apt-get","update"]
 RUN ["apt-get","install","-y","vim"]
 
-CMD ["python3","download_ckip.py"]
+RUN ["python3","download_ckip.py"]
+
+#ENTRYPOINT [ "/bin/sh" ]
+#CMD ["python3","download_ckip.py"]
 
 #CMD ["python3","hellodocker.py"]
