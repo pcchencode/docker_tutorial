@@ -1,10 +1,18 @@
 version: '2'
 services:
   db:
-     image: mysql
-     environment:
-        MYSQL_ROOT_PASSWORD: 123456
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    networks:
+      - tenet
+
   admin:
-     image: adminer
-     ports:
-       - 8080:8080
+    image: adminer
+    ports:
+      - 8080:8080
+    networks:
+      - tenet
+
+networks:
+  tenet:
