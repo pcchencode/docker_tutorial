@@ -5,6 +5,7 @@ ENV TZ Asia/Taipei
 
 #COPY requirements.txt .
 COPY hellodocker.py .
+COPY demo.sh .
 #COPY download_ckip.py .
 
 # Install any needed packages specified in requirements.txt
@@ -17,9 +18,9 @@ COPY hellodocker.py .
 #RUN ["python3","download_ckip.py"] # build的時候就會在容器內執行
 
 #ENTRYPOINT [ "/bin/echo" ] # 容器一進入點後的執行程序
-#ENTRYPOINT [ "/bin/sh" ]
-ENTRYPOINT [ "python3" ]
+ENTRYPOINT [ "/bin/sh" ]
+#ENTRYPOINT [ "python3" ]
 #CMD ["python3","download_ckip.py"]
-
-CMD ["hellodocker.py"]
+#CMD ["./hellodocker.py"]
 #CMD ["python3","hellodocker.py"]
+CMD ["demo.sh"]
