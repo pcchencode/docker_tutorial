@@ -14,6 +14,7 @@ COPY demo.sh .
 # install vim editor
 #RUN ["apt-get","update"]
 #RUN ["apt-get","install","-y","vim"]
+RUN ["mkdir", "data"] # 創建container的同時馬上創建一個data資料夾
 
 #RUN ["python3","download_ckip.py"] # build的時候就會在容器內執行
 
