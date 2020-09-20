@@ -1,9 +1,0 @@
-development:
-  adapter: mysql2
-  database: lang_report
-  username: user
-  password: pass
-  host: mysql
-  port: 3306
-  pool: 5
-  timeout: 5000

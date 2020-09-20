@@ -1,8 +1,0 @@
-source 'https://rubygems.org'
-
-gem 'mysql2'
-gem 'rubocop'
-gem 'aws-sdk', '~> 2'
-gem 'standalone_migrations', '~> 5.2'
-gem 'rake'
-gem 'activerecord', '~> 5.2'
