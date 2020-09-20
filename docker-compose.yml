@@ -1,0 +1,50 @@
+version: '3.7'
+
+services:
+  mysql:
+    image: mariadb:10.3.13
+    container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+      MYSQL_DATABASE: lang_report
+    ports:
+      - 3306:3306
+    networks:
+      - db-migrate
+    command:
+      - "--sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES"
+      - "--character-set-server=utf8"
+      - "--collation-server=utf8_general_ci"
+    restart: always
+
+  ruby:
+    image: ricklin/ruby-db-migration:latest
+    container_name: ruby
+    working_dir: /usr/src/app
+    volumes:
+      - ${PWD}:/usr/src/app
+    networks:
+      - db-migrate
+    depends_on: 
+      - "mysql"
+    command:
+      # Fix nokogiri and mysql client issue
+      # tail -f /dev/null is avoid ruby containers exited 0 
+      # - "/bin/sh"
+      # - "-c"
+      # - "bundle install \
+      #       && tail -f /dev/null"
+      - "/bin/sh"
+      - "-c"
+      - "bundle install \
+            && sleep 3 \
+            && cp db/config.yml.template db/config.yml \
+            && sed -i 's/127.0.0.1/mysql/g' db/config.yml \
+            && rake db:migrate \
+            && tail -f /dev/null"
+    restart: always
+
+networks:
+  db-migrate:
