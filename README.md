@@ -1,6 +1,6 @@
 # docker_tutorial
-### 下載
-
+### 下載方法擇一
+* Docker desktop [Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/) or [Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
 
 ### 使用方法與下載：
