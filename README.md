@@ -1,4 +1,8 @@
 # docker_tutorial
+### 下載
+
+
+
 ### 使用方法與下載：
 * Docker:
 1. download and install Docker desktop  [Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/) or [Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
@@ -6,6 +10,23 @@
 2. clone this repo and cd into this as working directory
 
 3. build image from `Dockerfile` and run `hellodocker.py` in container:
+
+4. hellodocker.py 會生成一個 data.csv 在 container 中
+
+***
+
+### 基本指令
+* 顯示 images 清單
+```
+$ docker images
+```
+
+* 顯示 containers 清單
+```
+$ docker ps
+$ docker ps -a
+```
+
 ```
 $ docker build -t {image_name} .
 # 利用 dockerfile 建立 images
@@ -22,20 +43,4 @@ $ docekr run -it -d {image_name} sh
 
 $ docker exec -it {container_id} sh
 # 若 docker run -d, 則後續可以直接運行
-```
-
-4. hellodocker.py 會生成一個 data.csv 在 container 中
-
-***
-
-### 基本指令
-* 顯示 images 清單
-```
-$ docker images
-```
-
-* 顯示 containers 清單
-```
-$ docker ps
-$ docker ps -a
 ```
