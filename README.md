@@ -1,17 +1,16 @@
 # docker_tutorial
-### 下載方法擇一
+### docker installation
 * Docker desktop [Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/) or [Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
+* [brew insatll](https://blog.yowko.com/homebrew-docker/)
 
-### 使用方法與下載：
-* Docker:
-1. download and install Docker desktop  [Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/) or [Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
-2. clone this repo and cd into this as working directory
+### 使用方法：
+1. clone this repo and cd into this as working directory
 
-3. build image from `Dockerfile` and run `hellodocker.py` in container:
+2. cd dir `cut_word` -> 中研院斷詞系統API 
 
-4. hellodocker.py 會生成一個 data.csv 在 container 中
+3. cd dir `selenium` -> run selenium on Linux OS
 
 ***
 
