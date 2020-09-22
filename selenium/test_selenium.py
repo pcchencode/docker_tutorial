@@ -1,5 +1,7 @@
 # https://towardsdatascience.com/how-to-setup-selenium-on-a-linux-vm-cd19ee47d922
-# chrome dirver version of Ubuntu: https://www.ubuntuupdates.org/pm/google-chrome-stable
+# chrome browser version of Ubuntu: https://www.ubuntuupdates.org/pm/google-chrome-stable
+# chrome driver version: https://chromedriver.chromium.org/downloads
+## driver 與 browser 的基本版本號要一樣 selenium 才能運行
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
