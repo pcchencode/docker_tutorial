@@ -15,7 +15,7 @@ RUN apt-get install -y curl unzip openjdk-8-jre-headless xvfb libxi6 libgconf-2-
 RUN curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add \
     && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
     && apt-get -y update \
-    && apt-get -y install google-chrome-stable
+    && apt-get -y install google-chrome-stable=85.0.4183.121-1
 
 # INSTALL CHROMEDRIVER
 RUN wget -N https://chromedriver.storage.googleapis.com/85.0.4183.87/chromedriver_linux64.zip -P ~/ \

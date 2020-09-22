@@ -1,4 +1,5 @@
 # https://towardsdatascience.com/how-to-setup-selenium-on-a-linux-vm-cd19ee47d922
+# chrome dirver version of Ubuntu: https://www.ubuntuupdates.org/pm/google-chrome-stable
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
