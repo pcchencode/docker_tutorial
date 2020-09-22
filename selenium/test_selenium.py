@@ -1,3 +1,4 @@
+# https://towardsdatascience.com/how-to-setup-selenium-on-a-linux-vm-cd19ee47d922
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
