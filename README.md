@@ -1,5 +1,5 @@
 # docker_tutorial
-### docker installation
+### 安裝 Docker (擇一)
 * Docker desktop [Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/) or [Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
 * [brew insatll](https://blog.yowko.com/homebrew-docker/)
