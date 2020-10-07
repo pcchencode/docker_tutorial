@@ -26,5 +26,5 @@ ENTRYPOINT ["/bin/ping"]
 #CMD ["./hellodocker.py"]
 #CMD ["python3","hellodocker.py"]
 #CMD ["demo.sh"]
-#CMD ["ping","localhost"] # 執行一個永遠不會停止的程式，才能讓container不會停止
+#CMD ["ping","localhost"] # 執行一個永遠不會停止的程式，才能讓container不會停止，就可以 exec 進到 container 裡面
 CMD ["localhost"] # 由entrypoint帶下來要執行的參數
