@@ -15,7 +15,7 @@ RUN pip install -r /requirements.txt
 RUN ["mkdir", "data"] # 創建container的同時馬上創建一個data資料夾
 
 # 使用 volumn 做連結
-VOLUME v"/data"
+VOLUME ["/data"]
 
 
 CMD ["python3","test.py"] # 執行一個永遠不會停止的程式，才能讓container不會停止，就可以 exec 進到 
