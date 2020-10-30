@@ -22,6 +22,7 @@ RUN ["mkdir", "data"] # 創建container的同時馬上創建一個data資料夾
 #ENTRYPOINT [ "/bin/sh" ]
 #ENTRYPOINT [ "	python3" ]
 ENTRYPOINT ["/bin/ping"]
+ENTRYPOINT ["/bin"]
 #CMD ["python3","download_ckip.py"]
 #CMD ["./hellodocker.py"]
 #CMD ["python3","hellodocker.py"]
