@@ -18,11 +18,11 @@ RUN ["mkdir", "data"] # 創建container的同時馬上創建一個data資料夾
 
 #RUN ["python3","download_ckip.py"] # build的時候就會在容器內執行
 
-#ENTRYPOINT [ "/bin/echo" ] # 容器一進入點後的執行程序
-#ENTRYPOINT [ "/bin/sh" ]
-#ENTRYPOINT [ "	python3" ]
-ENTRYPOINT ["/bin/ping"]
-ENTRYPOINT ["/bin"]
+#ENTRYPOINT [ "/bin/echo" ] # 容器一進入點後的執行程序, 一定會被執行!
+ENTRYPOINT [ "/bin/bash" ]
+#ENTRYPOINT [ "python3" ]
+#ENTRYPOINT ["/bin/ping"]
+#ENTRYPOINT ["/bin"]
 #CMD ["python3","download_ckip.py"]
 #CMD ["./hellodocker.py"]
 #CMD ["python3","hellodocker.py"]
