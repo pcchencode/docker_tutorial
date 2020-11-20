@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+  ruby:
+    image: ricklin/ruby-db-migration:latest
+    container_name: ruby
+    working_dir: /usr/src/app
+    volumes:
+      - ${PWD}:/usr/src/app
+    networks:
+      - db-migrate
+    # depends_on: 
+      # - "mysql"
+    command:
+      # Fix nokogiri and mysql client issue
+      # tail -f /dev/null is avoid ruby containers exited 0 
+      # - "/bin/sh"
+      # - "-c"
+      # - "bundle install \
+      #       && tail -f /dev/null"
+      - "/bin/sh"
+      - "-c"
+      # - "bundle install \
+      #       && sleep 3 \
+      #       && cp db/config.yml.template db/config.yml \
+      #       && sed -i 's/127.0.0.1/mysql/g' db/config.yml \
+      #       && rake db:migrate \
+      #       && tail -f /dev/null"
+      - "ping localhost"
+    # restart: always
+
+networks:
+  db-migrate:
