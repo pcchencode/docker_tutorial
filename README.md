@@ -5,18 +5,18 @@
 * [brew insatll](https://blog.yowko.com/homebrew-docker/)
 
 
-### 使用方法：
-1. clone this repo and cd into this as working directory
-
-2. cd dir `cut_word` -> 中研院斷詞系統API 
-
-3. cd dir `selenium` -> run selenium on Linux OS
-
-***
-
-## 流程
-### 建立 images
-
+### 流程
+1. 描述 images 所需要建置的環境
+    * 法二：撰寫 Dockerfile
+    * 法二：直接在 docker hub 上 pull images
+  
+2. 開始建置 images
+    * `$ docker build . -t {image_name}`
+        - `-t`：設定你的鏡像名稱
+        - `.`：表示在當前目錄尋找 Dockerfile
+       
+3. 利用建好的 images 執行 container
+    * `$ docker run`
 
 
 
