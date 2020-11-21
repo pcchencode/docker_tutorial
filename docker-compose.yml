@@ -1,0 +1,8 @@
+version: '3.7' # compose-file 語法版本
+
+services:
+  test:
+    #image: # 可以選擇從 docker hub 上面直接抓下來
+    build: .
+    container_name: my_cont
+    command: "ping localhost"
