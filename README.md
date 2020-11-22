@@ -22,15 +22,15 @@
 
 ### 基本指令
 * 顯示 images 清單
-```
-$ docker images
-```
+    ```
+    $ docker images
+    ```
 
 * 顯示 containers 清單
-```
-$ docker ps
-$ docker ps -a
-```
+    ```
+    $ docker ps # 顯示正在運行中的 container
+    $ docker ps -a # 顯示所有 container(包含已停止的)
+    ```
 
 ```
 $ docker build -t {image_name} .
