@@ -49,3 +49,10 @@ $ docekr run -it -d {image_name} sh
 $ docker exec -it {container_id} sh
 # 若 docker run -d, 則後續可以直接運行
 ```
+
+* 使用volume連結容器與本地端的資料夾
+```
+$ docker run -it -v {本地端資料夾路徑}:{容器資料夾路徑} {image_name} sh
+```
+
+
