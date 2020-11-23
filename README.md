@@ -50,5 +50,3 @@
 ```
 $ docker run -it -v {本地端資料夾路徑}:{容器資料夾路徑} {image_name} sh
 ```
-
-
