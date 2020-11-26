@@ -87,23 +87,23 @@
     ```
 
 * 停止 container
-```
-$ docker stop {containerID or containerNAME}
-```
+    ```
+    $ docker stop {containerID or containerNAME}
+    ```
 
 * 列出所有 container
-```
-$ docker ps
-$ docker ps -a => 列出包括已停止的 container
-```
+    ```
+    $ docker ps
+    $ docker ps -a => 列出包括已停止的 container
+    ```
 
 * 停止 container
-```
-$ docker rm {container_name}
-```
+    ```
+    $ docker rm {container_name}
+    ```
 
 * 移除所有 container
-```
-$ docker rm $(docker ps -a -q)
-$ docker rm -f $(docker ps -a- q) => 強制停止
-```
+    ```
+    $ docker rm $(docker ps -a -q)
+    $ docker rm -f $(docker ps -a- q) => 強制停止
+    ```
