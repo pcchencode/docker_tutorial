@@ -2,7 +2,7 @@
 ### 安裝 Docker (擇一)
 * Docker desktop [Mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac/) or [Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 
-* [brew insatll](https://blog.yowko.com/homebrew-docker/)
+* [brew install](https://blog.yowko.com/homebrew-docker/)
 
 
 ### 流程
@@ -47,6 +47,6 @@
     ```
 
 * 使用volume連結容器與本地端的資料夾
-```
-$ docker run -it -v {本地端資料夾路徑}:{容器資料夾路徑} {image_name} sh
-```
+    ```
+    $ docker run -it -v {本地端資料夾路徑}:{容器資料夾路徑} {image_name} sh
+    ```
