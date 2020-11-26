@@ -14,6 +14,9 @@
     * `$ docker build . -t {image_name}`
         - `-t`：設定你的鏡像名稱
         - `.`：表示在當前目錄尋找 Dockerfile
+
+    * `$ docker build -t {image_name} . --no-cache`
+        - 使用 `--no-cache` 的主要原因在於，避免 docker build image 時被 cache 住，造成沒有 build 到修改過的 Dockerfile（所以除非有修改過，要不然不要加 --no-cache，要不然每次都會重新 build 一次可能會跑很久）
        
 3. 利用建好的 images 執行 container
     * `$ docker run`
@@ -25,6 +28,15 @@
     ```
     $ docker images
     ```
+* 移除 image
+    ```
+    $ docker rmi {image_name}
+    ```
+* 移除所有 images
+    ```
+    $ docker rmi $(docker images ps -a -q)
+    ```
+
 
 * 顯示 containers 清單
     ```
@@ -46,7 +58,52 @@
         若 docker run -d, 則後續可以直接運行
     ```
 
+* 手動對 container 執行一個不停止的服務並將其丟入背景執行
+    ```
+    $ docker run -d {image_name} ping localhost
+
+    $ docker run -d --name my_container test_image
+        -d: -- detach 在背景執行
+        —name: 幫自己的container取名字
+    ```
+* container 背景服務、自動重新啟動
+    ```
+    $ docker run --restart=always -d -it ubuntu
+    ```
+
+* 後續就可以進入container進行編程
+    ```
+    $ docker exec -it {container_name} bash/sh
+    ```
+
 * 使用volume連結容器與本地端的資料夾
     ```
     $ docker run -it -v {本地端資料夾路徑}:{容器資料夾路徑} {image_name} sh
     ```
+
+* 命名container
+    ```
+    $ docker run --name {NAME} -d {image_name} ping localhost
+    ```
+
+* 停止 container
+```
+$ docker stop {containerID or containerNAME}
+```
+
+* 列出所有 container
+```
+$ docker ps
+$ docker ps -a => 列出包括已停止的 container
+```
+
+* 停止 container
+```
+$ docker rm {container_name}
+```
+
+* 移除所有 container
+```
+$ docker rm $(docker ps -a -q)
+$ docker rm -f $(docker ps -a- q) => 強制停止
+```
